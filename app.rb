@@ -10,6 +10,6 @@ end
 
 
 get "/:hand1/:hand2" do
-  @result = Game.play(params[:hand1].to_s, params[:hand2].to_s)
+  @result = Game.play(params[:hand1].capitalize, params[:hand2].capitalize)
   erb(:result)
 end
